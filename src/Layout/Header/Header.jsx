@@ -1,7 +1,10 @@
 import React, { useLayoutEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Logo from "./components/Logo";
-import container from "../../components/container";
+import Container from "../../components/Container";
+import Menu from "./components/Menu";
+import style from "./style.module.css";
+
 const Header = () => {
   const { pathname } = useLocation();
 
@@ -13,8 +16,10 @@ const Header = () => {
   return (
     <div className="header">
       <Container>
-        <Logo logoType={logoOption ? "Home" : "all"} />
-        <h1>header</h1>
+        <div className={style.header_in}>
+          <Logo logoType={logoOption ? "Home" : "all"} />
+          <Menu />
+        </div>
       </Container>
     </div>
   );

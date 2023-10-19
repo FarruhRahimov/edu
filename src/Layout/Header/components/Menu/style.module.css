@@ -1,7 +1,9 @@
-.header_in {
-  width: 100%;
+.menu ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: darkgray;
+  gap: 45px;
+}
+.active {
+  color: gold;
 }
